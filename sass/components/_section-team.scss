@@ -2,7 +2,7 @@
     background-color: $button-color;
 
     &__title {
-        @include font(28px, 700, 1.32, 0.03em);
+        @include font(28px, 700, 1.17, 0.03em);
         text-align: center;
         margin-top: 0;
         margin-bottom: 30px;
@@ -18,7 +18,7 @@
         @media screen and (min-width: $tablet) and (max-width: 1199px) {
             display: flex;
             flex-wrap: wrap;
-            margin: -15px;
+            margin: 0 -15px;
         }
 
         @media screen and (min-width: $desctop) {
