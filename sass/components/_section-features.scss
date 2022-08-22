@@ -1,10 +1,12 @@
 .feature__list {
-    display: flex;
+        max-width: 480px;
+        width: 100%;
+    // display: flex;
     margin: 0;
 }
 
 .feature__item {
-    width: 270px;
+    // width: 270px;
 
     &:not(:last-child) {
         margin-right: 30px;
@@ -16,7 +18,7 @@
 // }
 
 .feature__box {
-    @extend %flex-center;
+    // @extend %flex-center;
 
     height: 120px;
     background-color: $button-color;

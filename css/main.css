@@ -69,7 +69,7 @@ a {
   color: #2196F3;
 }
 
-.subscription__button, .client__link, .social__link, .feature__box, .agreement__box, .agreement__label, .modal__button {
+.subscription__button, .client__link, .social__link, .agreement__box, .agreement__label, .modal__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,8 +87,13 @@ a {
   display: flex;
 }
 .menu__list {
-  display: flex;
-  margin: 0;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .menu__list {
+    display: flex;
+    margin: 0;
+  }
 }
 .menu__item:not(:last-child) {
   margin-right: 50px;
@@ -125,9 +130,14 @@ a {
 
 /* subsection contacts */
 .contact {
-  display: flex;
-  margin-top: 0;
-  margin-bottom: 0;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 .contact__item:first-child {
   margin-right: 30px;
@@ -333,13 +343,11 @@ a {
 }
 
 .feature__list {
-  display: flex;
+  max-width: 480px;
+  width: 100%;
   margin: 0;
 }
 
-.feature__item {
-  width: 270px;
-}
 .feature__item:not(:last-child) {
   margin-right: 30px;
 }

@@ -1,4 +1,5 @@
 .header {
+
     border-bottom: 1px solid #ececec;
 
     &__container {
@@ -16,8 +17,12 @@
     display: flex;
 
     &__list {
-        display: flex;
-        margin: 0;
+        display: none;      
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            margin: 0;
+        }
     }
 
     &__item:not(:last-child) {
@@ -102,9 +107,13 @@
 /* subsection contacts */
 
 .contact {
-    display: flex;
-    margin-top: 0;
-    margin-bottom: 0;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 
     &__item:first-child {
         margin-right: 30px;
