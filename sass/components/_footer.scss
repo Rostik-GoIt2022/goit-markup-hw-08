@@ -1,43 +1,48 @@
 .footer {
     background-color: #2F303A;
 
+    // display: flex;
+    // flex-direction: column;
+    // justify-items: center;
+    // align-items: center;
+    
     &__container {
-        display: flex;
+        // display: flex;
+        // flex-direction: column;
+        // justify-items: center;
+        // align-items: center;
+        text-align: center;
+        padding: 60px 15px;
     }
 
     &__wrapper {
-        margin: 60px 0;
-        width: 231px;
+        margin-bottom: 60px;
+
+        // margin: 60px 0;
+        // width: 231px;
     }
 
     &__logo {
+        padding: 0;
         color: $background-color;
-        margin-bottom: 20px;
+        @include font(24px, 700, 1.16, 0.03em);
     }
 }
-
-// .footer__container {
-//     display: flex;
-// }
-
-// .footer__wrapper {
-//     margin: 60px 0;
-//     width: 231px;
-// }
-
-// .footer__logo {
-//     color: $background-color;
 
 //     margin-bottom: 20px;
 // }
 
+.address {
+    margin-top: 20px;
+}
+
 .address__list {
-    margin: 20px 0 0 0;
+    // margin: 20px 0 0 0;
     padding-left: 0;
 }
 
 .address__item:not(:last-child) {
-    margin-bottom: 9px;
+//     margin-bottom: 9px;
 }
 
 .address__link {
@@ -69,8 +74,9 @@
 /* subsection social */
 
 .footer__box {
-    height: 80px;
-    margin: 72px 93px 100px 70px;
+    // height: 80px;
+    // margin: 72px 93px 100px 70px;
+    margin-bottom: 60px;
 }
 
 .footer__title {
@@ -97,24 +103,25 @@
 /* subsection footer form */
 
 .subscription {
-    display: flex;
-    align-items: flex-end;
+    // display: flex;
+    // align-items: flex-end;
 
-    margin-top: 72px;
-    margin-bottom: 94px;
-    width: 570px;
+    // margin-top: 72px;
+    // margin-bottom: 94px;
+    // width: 570px;
 
     &__wrapper {
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
+        // font-display: center;
 
-        margin-right: 12px;
+        // margin-right: 12px;
     }
 
     &__input {
         background-color: inherit;
-        width: 358px;
         padding: 15px 16px;
+        width: 100%;
     
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 4px;
@@ -123,12 +130,11 @@
 
     &__button {
         @extend %flex-center;
-    
-        padding: 0;
+        margin-top: 20px;
     }
 
     &__icon {
-        margin-left: 10px;
+        // margin-left: 10px;
     }
 }
 
@@ -170,4 +176,4 @@
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-} 
+}
