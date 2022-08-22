@@ -75,7 +75,7 @@ a {
   color: #2196F3;
 }
 
-.subscription__button, .client__link, .social__link, .agreement__box, .agreement__label, .modal__button {
+.subscription__button, .client__link, .social__link, .feature__box, .agreement__box, .agreement__label, .modal__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -380,9 +380,48 @@ a {
 .feature__list {
   margin: 0;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .feature__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature__list {
+    display: flex;
+  }
+}
 
-.feature__item:not(:last-child) {
-  margin-right: 30px;
+.feature__item {
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .feature__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .feature__item:nth-child(-n+2) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .feature__item {
+    width: calc((100% - 60px) / 2);
+    margin: 0 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature__item {
+    margin: 0;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .feature__box {
