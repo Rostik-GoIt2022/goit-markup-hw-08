@@ -1,0 +1,19 @@
+@import './base/fonts.scss';
+@import './base/reset';
+@import './utils/mixin';
+@import './utils/variables';
+@import './utils/common';
+@import './components/header';
+@import './components/section-hero';
+@import './components/section-features';
+@import './components/section-action';
+@import './components/section-team';
+@import './components/section-clients';
+@import './components/footer';
+@import './components/section-portfolio';
+
+body {
+    background-color: var(--background-color);
+    color: $brand-color;
+    font-family: $roboto;
+}
