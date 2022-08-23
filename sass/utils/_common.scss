@@ -1,18 +1,24 @@
 .button {
-    width: 200px;
-    height: 50px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    min-width: 200px;
+    min-height: 50px;
+    padding: 10px 10px;
+    
     background-color: $accent-color;
     color: $background-color;
 
     border-radius: 4px;
     cursor: pointer;
-
+    
+    margin-left: auto;
+    margin-right: auto;
+    
     font-family: inherit;
-
     @include font(16px, 700, 1.87, 0.06em);
-
-    border: 0;
 }
 
 .section {
