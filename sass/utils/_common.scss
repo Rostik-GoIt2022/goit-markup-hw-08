@@ -29,17 +29,18 @@
     max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
-}
 
-%after::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    bottom: -2px;
-    left: 0;
-    background-color: $accent-color;
-    border-radius: 4px;
+    @media screen and (min-width: $mobile) {
+        max-width: 480px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        max-width: 768px;
+    }
+    
+    @media screen and (min-width: $desctop) {
+        max-width: 1200px;
+    }
 }
 
 %hover-focus:hover,
