@@ -76,7 +76,7 @@ a {
   color: #2196F3;
 }
 
-.subscription__button, .client__link, .social__link, .feature__box, .agreement__box, .agreement__label, .modal__button {
+.client__link, .social__link, .feature__box, .agreement__box, .agreement__label, .modal__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,19 +89,40 @@ a {
   display: flex;
   justify-content: space-between;
 }
-
-.menu {
-  display: flex;
-}
-.menu__list {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .menu__list {
-    display: flex;
-    margin: 0;
+@media screen and (max-width: 767px) {
+  .header__container {
+    position: relative;
   }
 }
+
+.header__wrapper {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .header__wrapper {
+    display: none;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 48px 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header__wrapper {
+    flex-basis: 70%;
+  }
+}
+.header__wrapper.is-open {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  justify-content: space-between;
+}
+
 .menu__item:not(:last-child) {
   margin-right: 50px;
 }
@@ -119,6 +140,23 @@ a {
   color: #2196F3;
   position: relative;
 }
+.menu__button {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  background-color: transparent;
+}
+.menu__button.is-open {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+@media screen and (min-width: 768px) {
+  .menu__button {
+    display: none;
+  }
+}
 
 .logo {
   color: #000000;
@@ -135,14 +173,9 @@ a {
 }
 
 /* subsection contacts */
-.contact {
-  display: none;
-}
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .contact {
-    display: flex;
-    margin-top: 0;
-    margin-bottom: 0;
+    display: none;
   }
 }
 .contact__item:first-child {
@@ -154,14 +187,22 @@ a {
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: 0.02em;
-  padding: 32px 0;
-  display: flex;
-  align-items: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact__icon {
   fill: currentColor;
   margin-right: 10px;
+}
+
+.icon-mobile-close {
+  display: none;
+}
+
+.menu-button.is-open .icon-mobile-open {
+  display: none;
+}
+.menu-button.is-open .icon-mobile-close {
+  display: block;
 }
 
 .hero {
@@ -693,11 +734,42 @@ a {
   background-color: #2F303A;
 }
 .footer__container {
-  text-align: center;
   padding: 60px 15px;
+}
+@media screen and (max-width: 1199px) {
+  .footer__container {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    display: flex;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__holder {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__holder {
+    display: flex;
+    justify-content: center;
+  }
 }
 .footer__wrapper {
   margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__wrapper {
+    margin-right: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__wrapper {
+    margin-right: 70px;
+  }
 }
 .footer__logo {
   padding: 0;
@@ -711,7 +783,6 @@ a {
 .address {
   margin-top: 20px;
 }
-
 .address__list {
   padding-left: 0;
 }
@@ -735,6 +806,11 @@ a {
 .footer__box {
   margin-bottom: 60px;
 }
+@media screen and (min-width: 1200px) {
+  .footer__box {
+    margin-right: 93px;
+  }
+}
 
 .footer__title {
   color: #FFFFFF;
@@ -757,6 +833,20 @@ a {
 }
 
 /* subsection footer form */
+@media screen and (min-width: 1200px) {
+  .subscription {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscription__wrapper {
+    display: flex;
+    flex-direction: column;
+    font-display: center;
+    margin-right: 12px;
+  }
+}
 .subscription__input {
   background-color: inherit;
   padding: 15px 16px;
@@ -765,9 +855,15 @@ a {
   border-radius: 4px;
   color: #FFFFFF;
 }
-.subscription__button {
-  margin-top: 20px;
+@media screen and (max-width: 1199px) {
+  .subscription__button {
+    margin-top: 20px;
+  }
 }
+.subscription__icon {
+  margin-left: 10px;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
