@@ -1,5 +1,9 @@
 .action {
     padding-top: 0;
+    
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
 
     &__title {
         @include font(36px, 700, 1.16, 0.03em);

@@ -4,10 +4,8 @@
     
     &__container {
         display: flex;
-
-        @media screen and (max-width: 767px) {
-            justify-content: space-between;
-        }
+        align-items: center;
+        justify-content: space-between;
         
         @media screen and (max-width: 767px) {
             position: relative;
@@ -17,10 +15,6 @@
     &__wrapper {
         display: flex;
         
-        @media screen and (min-width: $desctop) {
-            justify-content: space-between;
-        }
-
         @media screen and (max-width: 767px) {
             display: none;
             width: 100%;
@@ -65,27 +59,11 @@
 }
 
 .menu {
-    @media screen and (max-width: 767px) {
-        margin-bottom: 302px;
-    }
-
-    @media screen and (min-width: $tablet) {
-        margin-left: 88px;
-    }
-
-    @media screen and (min-width: $desctop) {
-        margin-left: 93px;
-    }
 
     &__list {
-        @media screen and (min-width: $tablet) {
-                margin-right: 80px;
-            }
-
-        @media screen and (min-width: $desctop) {
-            margin-right: 305px;
-        }
-
+    
+        
+        
         @media screen and (max-width: 767px) {
             flex-direction: column;
             justify-content: space-between;
@@ -93,6 +71,8 @@
 
         @media screen and (min-width: $tablet) {
             display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     }
         
@@ -101,7 +81,7 @@
             margin-bottom: 32px;
         }
     
-        @media screen and (min-width: $tablet) {
+        @media screen and (min-width: 1200px) {
             margin-right: 50px;
         }
     }
@@ -119,9 +99,7 @@
         z-index: 40;
 
         @media screen and (min-width: $tablet) {
-            @include font(14px, 500, 1.1, 0.02em);
-            margin-top: 32px;
-            margin-bottom: 32px;
+            @include font(14px, 500, 1.1, 0.02em)
         }
     }
 
@@ -138,22 +116,12 @@
             position: absolute;
             width: 100%;
             height: 4px;
-            bottom: -33px;
+            bottom: -2px;
             left: 0;
             background-color: $accent-color;
             border-radius: 4px;
         }
-
-        @media screen and (min-width: $desctop) {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 4px;
-            bottom: -37px;
-            left: 0;
-            background-color: $accent-color;
-            border-radius: 4px;
-        }
+    
     }
 
     &__button {
@@ -173,92 +141,89 @@
             display: none;
         }
     }
+
 }
 
 /* subsection contacts */
 
 .contact {
     display: flex;
-
-    @media screen and (max-width: 767px) {
     flex-direction: column-reverse;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    
+
     @media screen and (min-width: $desctop) {
         flex-direction: row;
+        
     }
 
-    @media screen and (min-width: $tablet) and (max-width: 1199px) {
-        flex-wrap: wrap;
-        flex-basis: 50%;
-        align-content: center;
-    }
+    // &__item:first-child {
+    //     margin-right: 30px;
+    // }
 
-    &__item {
-        @media screen and (min-width: 768px) and (max-width: 1199px) {
-            &:nth-child(1) {
-                margin-bottom: 10px;
-            }
-        }
-
-        &:first-child {
-            @media screen and (min-width: $desctop) {
-                    margin-right: 30px;
-                }
-        }
-    }
-    
     &__item:not(:first-child) {
-        @media screen and (max-width: 767px) {
-            margin-bottom: 32px;
-        }
+        margin-bottom: 32px;
     }
 
     &__link {
         color: $text-color;
-
-        @media screen and (min-width: $desctop) {
-            padding: 32px 0;
-        }
-
-        @media screen and (min-width: $tablet) {
-            display: flex;
-        }
         
         @include font(24px, 500, 1.16, 0.02em);
+    
 
-        @media screen and (min-width: $tablet) {
-            @include font(12px, 500, 1.16, 0.02em);
-        }
-
-        @media screen and (min-width: $desctop) {
-            @include font(14px, 500, 1.14, 0.02em);
-        }
- 
+        // padding: 32px 0;
+    
+        // display: flex;
+        
+    
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         
         @extend %hover-focus;
     }
 
     &__link--color {
-        @media screen and (max-width: 767px) {
-            @include font(34px, 500, 1.17, 0.02em);
-            color: $accent-color;
-        }
+        @include font(34px, 500, 1.17, 0.02em);
+        color: $accent-color;
     }
 
     &__icon {
         fill: currentColor;
-        
-        @media screen and (min-width: $tablet) {
-            margin-right: 8px;
-        }
-
-        @media screen and (min-width: $desctop) {
-            margin-right: 10px;
-        }
+        margin-right: 10px;
     }
 }
+
+// .contact__item:first-child {
+//     margin-right: 30px;
+// }
+
+// .contact__link {
+//     color: $text-color;
+//     font-size: 14px;
+//     font-weight: 500;
+//     line-height: 1.1;
+//     letter-spacing: 0.02em;
+
+//     padding: 32px 0;
+
+//     display: flex;
+//     align-items: center;
+
+//     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+// }
+
+// .contact__link:hover,
+// .contact__link:focus {
+//     color: $accent-color;
+// }
+
+// .contact__icon {
+//     fill: currentColor;
+//     margin-right: 10px;
+// }
 
 .header-social__list {
     display: flex;
